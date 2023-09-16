@@ -3,10 +3,11 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/HomePage';
 import CatalogAvto from './pages/CatalogAvto';
 // import FavoriteAvto from './pages/FavoritesAvto';
+import { Container } from './components/App.styled';
 
 function App() {
   return (
-    <div>
+    <Container>
       <nav>
         <Link to="/" end>
           Home
@@ -18,7 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/catalog" element={<CatalogAvto />} />
       </Routes>
-    </div>
+    </Container>
   );
 }
 

@@ -1,4 +1,4 @@
-import AdvertsList from '../components/AdvertsList';
+import AdvertsList from '../components/AdvertsList/AdvertsList';
 
 const Adverts = () => {
   return (
