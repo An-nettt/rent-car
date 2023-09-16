@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, Link } from 'react-router-dom';
+
+import Home from './pages/HomePage';
+import CatalogAvto from './pages/CatalogAvto';
+// import FavoriteAvto from './pages/FavoritesAvto';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <nav>
+        <Link to="/" end>
+          Home
+        </Link>
+        <Link to="/catalog">Catalog</Link>
+        <Link to="/favorite">Favorite</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/catalog" element={<CatalogAvto />} />
+      </Routes>
     </div>
   );
 }
 
 export default App;
+
+//  {
+//    /* <Route path="/catalog/:car" element={<Car />} /> */
+//  }
+//  {
+//    /* <Route path="/favorites" element={<FavoriteAvto />} /> */
+//  }
+//  {
+//    /* <Route path="*" element={<NotFoundPage />} /> */
+//  }
