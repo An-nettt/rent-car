@@ -1,56 +1,35 @@
 import styled from 'styled-components';
 
 const Modal = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 8px;
+  width: 100vw;
   max-width: 541px;
-  max-height: 752px;
-`;
-
-const CloseModal = styled.button`
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  /* zindex: 1; */
-  width: 100%;
-  height: 44px;
-  display: inline-block;
-  border-radius: 12px;
-  border: none;
-  color: #ffffff;
-  background-color: #3470ff;
-
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1.4;
-  letter-spacing: 0.06em;
-  align-items: center;
-  text-align: center;
-
-  cursor: pointer;
+  height: 100wh;
 `;
 
 const Image = styled.img`
   display: block;
   width: 100%;
-  height: 268px;
+  height: 248px;
 
   border-radius: 14px;
   object-fit: cover;
 `;
 
-const Thumb = styled.div`
-  display: flex;
-  justify-content: space-between;
-
-  margin-bottom: 8px;
-`;
-
 const MainText = styled.p`
   font-family: inherit;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   color: #121417;
+
+  margin-top: 14px;
+  margin-bottom: 8px;
 `;
 
 const Highlight = styled.span`
@@ -58,7 +37,10 @@ const Highlight = styled.span`
 `;
 
 const TextList = styled.ul`
-  margin-bottom: 28px;
+  &:last-child {
+    background-color: black;
+    margin-bottom: 4px;
+  }
 `;
 
 const Text = styled.li`
@@ -80,12 +62,67 @@ const Text = styled.li`
   }
 `;
 
-const Button = styled.button`
-  width: 100%;
+const DescriptionText = styled.p`
+  display: inline-block;
+
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #121417;
+
+  margin-top: 14px;
+`;
+
+const PropertiesText = styled.p`
+  display: inline-block;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #121417;
+
+  margin-top: 24px;
+  margin-bottom: 8px;
+`;
+
+const Thumb = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-bottom: 24px;
+`;
+
+const ThumbText = styled.li`
+  width: auto;
+  height: 32px;
+  background-color: #f9f9f9;
+  border-radius: 35px;
+
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #363535;
+  padding: 7px 14px;
+`;
+
+const ThumbHighlight = styled.span`
+  color: #3470ff;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+`;
+
+const ButtonRental = styled.a`
+  width: 168px;
   height: 44px;
+  padding-top: 12px;
   display: inline-block;
   border-radius: 12px;
   border: none;
+  text-decoration: none;
   color: #ffffff;
   background-color: #3470ff;
 
@@ -93,8 +130,6 @@ const Button = styled.button`
   font-weight: 600;
   font-size: 14px;
   line-height: 1.4;
-  letter-spacing: 0.06em;
-  align-items: center;
   text-align: center;
 
   cursor: pointer;
@@ -102,12 +137,15 @@ const Button = styled.button`
 
 export {
   Modal,
-  CloseModal,
   Image,
-  Thumb,
   MainText,
   Highlight,
   TextList,
   Text,
-  Button,
+  DescriptionText,
+  PropertiesText,
+  Thumb,
+  ThumbText,
+  ThumbHighlight,
+  ButtonRental,
 };

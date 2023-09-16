@@ -8,10 +8,11 @@ import {
   getIsLoading,
 } from '../../redux/adverts/advertsSelectors';
 import { Gallery, LoadMoreButton } from './AdvertsList.styled';
-import AdvertsCard from '../AdvertCard/AdvertsCard';
+import AdvertCard from '../AdvertCard/AdvertCard';
 
 const AdvertsList = () => {
   const [page, setPage] = useState(1);
+
   const dispatch = useDispatch();
 
   const adverts = useSelector(getAdverts);
@@ -20,7 +21,6 @@ const AdvertsList = () => {
 
   useEffect(() => {
     dispatch(fetchAdverts(page));
-    console.log(page);
   }, [page, dispatch]);
 
   const handleMoreAdvertsClick = () => {
@@ -31,7 +31,7 @@ const AdvertsList = () => {
     <>
       <Gallery>
         {adverts.items.map((car) => (
-          <AdvertsCard carEl={car} />
+          <AdvertCard carEl={car} />
         ))}
       </Gallery>
       <LoadMoreButton

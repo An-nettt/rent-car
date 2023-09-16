@@ -1,50 +1,89 @@
+import ModalClose from '@mui/joy/ModalClose';
+import Sheet from '@mui/joy/Sheet';
+
 import {
   Modal,
-  CloseModal,
   Image,
-  Thumb,
   MainText,
   Highlight,
   TextList,
   Text,
-  Button,
+  DescriptionText,
+  PropertiesText,
+  Thumb,
+  ThumbText,
+  ThumbHighlight,
+  ButtonRental,
 } from './AdvertCardModal.styled';
 
-const AdvertCardModal = ({ carEl }) => {
-  console.log(carEl);
-
+const AdvertCardModal = ({ carEl, closeModal }) => {
+  // console.log(carEl);
   const address = carEl.address.split(',');
   const city = address[1];
   const country = address[2];
 
   return (
     <Modal>
-      <CloseModal
-        type="button"
-        onClick={closeModal}
-        sx={{
-          position: 'absolute',
-          top: '14px',
-          right: '14px',
-          zIndex: 1,
-        }}
-      />
-      <Image src={carEl.img} alt={`${carEl.make} ${carEl.model}`} />
-      <Thumb>
+      <ModalClose />
+      <Sheet>
+        <Image src={carEl.img} alt={`${carEl.make} ${carEl.model}`} />
+
         <MainText>
           {carEl.make} <Highlight>{carEl.model}</Highlight>, {carEl.year}
         </MainText>
-        <MainText>{carEl.rentalPrice}</MainText>
-      </Thumb>
-      <TextList>
-        <Text>{city} </Text>
-        <Text>{country}</Text>
-        <Text>{carEl.rentalCompany}</Text>
-        <Text>{carEl.type}</Text>
-        <Text>{carEl.id}</Text>
-        <Text>{carEl.accessories[1]}</Text>
-      </TextList>
-      <Button type="button">Learn more</Button>
+
+        <TextList>
+          <Text>{city} </Text>
+          <Text>{country}</Text>
+          <Text>Id: {carEl.id}</Text>
+          <Text>Year: {carEl.year}</Text>
+          <Text>Type: {carEl.type}</Text>
+        </TextList>
+        <TextList>
+          <Text>Fuel Consumption: {carEl.fuelConsumption}</Text>
+          <Text>Engine Size: {carEl.engineSize}</Text>
+        </TextList>
+        <DescriptionText>{carEl.description}</DescriptionText>
+        <PropertiesText>Accessories and functionalities:</PropertiesText>
+        <div>
+          {carEl.accessories.map((string, index) => (
+            <Text key={index}>{string}</Text>
+          ))}
+          {carEl.functionalities.map((string, index) => (
+            <Text key={index}>{string}</Text>
+          ))}
+        </div>
+        <PropertiesText>Rental Conditions: </PropertiesText>
+        <Thumb>
+          {carEl.rentalConditions.split('\n').map((condition, index) => {
+            const age = parseInt(+/\d+/.exec(condition));
+
+            return (
+              <ThumbText key={index}>
+                {condition.replace(`${age}`, '')}
+                {age ? <ThumbHighlight>{age}</ThumbHighlight> : ''}
+              </ThumbText>
+            );
+          })}
+          <ThumbText>
+            Mileage:{' '}
+            <ThumbHighlight>
+              {new Intl.NumberFormat('en-US').format(carEl.mileage)}
+            </ThumbHighlight>
+          </ThumbText>
+          <ThumbText>
+            Price:{' '}
+            <ThumbHighlight>
+              {new Intl.NumberFormat('ru', {
+                style: 'currency',
+                currency: 'USD',
+                minimumFractionDigits: 0,
+              }).format(carEl.rentalPrice.slice(-2))}
+            </ThumbHighlight>
+          </ThumbText>
+        </Thumb>
+        <ButtonRental href="tel:+380730000000">Rental car</ButtonRental>
+      </Sheet>
     </Modal>
   );
 };

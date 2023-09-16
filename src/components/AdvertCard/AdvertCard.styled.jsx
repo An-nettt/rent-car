@@ -1,24 +1,46 @@
 import styled from 'styled-components';
 
 const Card = styled.li`
-  width: 274px;
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-between;
 
+  width: 274px;
+  height: 426px;
+  margin-top: 20px;
+`;
+
+const Thumb = styled.div`
+  position: relative;
   overflow: hidden;
 `;
 
 const Image = styled.img`
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: 268px;
 
   border-radius: 14px;
   object-fit: cover;
+  overflow: hidden;
 `;
 
-const Thumb = styled.div`
+const Favorite = styled.svg`
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  stroke: rgba(255, 255, 255, 0.8);
+  fill: transparent;
+
+  top: 14px;
+  right: 14px;
+`;
+
+const ThumbText = styled.div`
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 
   margin-bottom: 8px;
 `;
@@ -71,11 +93,21 @@ const Button = styled.button`
   font-weight: 600;
   font-size: 14px;
   line-height: 1.4;
-  letter-spacing: 0.06em;
   align-items: center;
   text-align: center;
 
   cursor: pointer;
 `;
 
-export { Card, Image, Thumb, MainText, Highlight, TextList, Text, Button };
+export {
+  Card,
+  Thumb,
+  Image,
+  Favorite,
+  ThumbText,
+  MainText,
+  Highlight,
+  TextList,
+  Text,
+  Button,
+};
