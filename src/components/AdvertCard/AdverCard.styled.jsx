@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const AdvertCard = styled.li`
+const Card = styled.li`
   width: 274px;
   margin-top: 20px;
 
@@ -78,13 +78,4 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-export {
-  AdvertCard,
-  Image,
-  Thumb,
-  MainText,
-  Highlight,
-  TextList,
-  Text,
-  Button,
-};
+export { Card, Image, Thumb, MainText, Highlight, TextList, Text, Button };

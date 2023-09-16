@@ -9,4 +9,20 @@ const Gallery = styled.ul`
   justify-content: center;
 `;
 
-export { Gallery };
+const LoadMoreButton = styled.button`
+  width: 100%;
+  text-align: center;
+  color: #3470ff;
+  background-color: transparent;
+  text-decoration: underline;
+  border: none;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+
+  cursor: pointer;
+`;
+
+export { Gallery, LoadMoreButton };

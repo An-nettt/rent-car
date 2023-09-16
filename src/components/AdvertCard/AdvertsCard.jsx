@@ -1,5 +1,5 @@
 import {
-  AdvertCard,
+  Card,
   Image,
   Thumb,
   MainText,
@@ -7,17 +7,15 @@ import {
   TextList,
   Text,
   Button,
-} from './AdvertsCard.styled';
+} from './AdverCard.styled';
 
-const AdvertsCard = ({ carEl }) => {
-  console.log(carEl);
-
+const AdvertCard = ({ carEl }) => {
   const address = carEl.address.split(',');
   const city = address[1];
   const country = address[2];
 
   return (
-    <AdvertCard>
+    <Card>
       <Image src={carEl.img} alt={`${carEl.make} ${carEl.model}`} />
       <Thumb>
         <MainText>
@@ -34,8 +32,8 @@ const AdvertsCard = ({ carEl }) => {
         <Text>{carEl.accessories[1]}</Text>
       </TextList>
       <Button type="button">Learn more</Button>
-    </AdvertCard>
+    </Card>
   );
 };
 
-export default AdvertsCard;
+export default AdvertCard;
