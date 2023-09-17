@@ -4,6 +4,7 @@ const Form = styled.form`
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   align-items: flex-end;
