@@ -73,7 +73,6 @@ const ThumbText = styled.div`
 `;
 
 const MainText = styled.p`
-  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;

@@ -23,6 +23,7 @@ const Header = styled.header`
   height: 60px;
   padding: 20px;
   background-color: #003366;
+  z-index: 10;
 `;
 
 const Navigate = styled.nav`
