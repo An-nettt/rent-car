@@ -1,4 +1,12 @@
 @import-normalize;
+@font-face {
+  font-family: 'Manrope';
+  src: local('Poppins-Regular'), local('Poppins-Medium'),
+    local('Poppins-SemiBold'),
+    url('./components/fonts/Manrope-Regular.ttf') format('truetype'),
+    url('./components/fonts/Manrope-Medium.ttf') format('truetype'),
+    url('./components/fonts/Manrope-SemiBold.ttf') format('truetype');
+}
 
 body {
   margin: 0;

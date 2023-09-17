@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 
-import Home from './pages/HomePage';
+import Home from './pages/HomePage/HomePage';
 import CatalogAvto from './pages/CatalogAvto';
 import FavoriteAvto from './pages/FavoritesAvto';
 import { Container, Header, Navigate, Link } from './components/App.styled';
