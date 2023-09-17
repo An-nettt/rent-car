@@ -133,6 +133,10 @@ const ButtonRental = styled.a`
   text-align: center;
 
   cursor: pointer;
+
+  &:hover {
+    background-color: #0b44cd;
+  }
 `;
 
 export {

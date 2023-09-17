@@ -18,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/catalog" element={<CatalogAvto />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </Container>
   );
@@ -32,5 +33,5 @@ export default App;
 //    /* <Route path="/favorites" element={<FavoriteAvto />} /> */
 //  }
 //  {
-//    /* <Route path="*" element={<NotFoundPage />} /> */
+//    /* } /> */
 //  }

@@ -26,15 +26,33 @@ const Image = styled.img`
   overflow: hidden;
 `;
 
-const Favorite = styled.svg`
+const FavoriteButton = styled.button`
+  display: inline-flex;
   position: absolute;
   width: 18px;
   height: 18px;
+  top: 14px;
+  right: 14px;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+`;
+
+const FavoriteIcon = styled.svg`
+  width: 18px;
+  height: 18px;
+
   stroke: rgba(255, 255, 255, 0.8);
   fill: transparent;
 
-  top: 14px;
-  right: 14px;
+  &:hover,
+  &:active {
+    stroke: #3470ff;
+    fill: #3470ff;
+  }
 `;
 
 const ThumbText = styled.div`
@@ -97,13 +115,18 @@ const Button = styled.button`
   text-align: center;
 
   cursor: pointer;
+
+  &:hover {
+    background-color: #0b44cd;
+  }
 `;
 
 export {
   Card,
   Thumb,
   Image,
-  Favorite,
+  FavoriteButton,
+  FavoriteIcon,
   ThumbText,
   MainText,
   Highlight,
@@ -111,3 +134,8 @@ export {
   Text,
   Button,
 };
+
+// &:hover {
+//   fill: #3470ff;
+//   /* stroke: #3470ff; */
+// }

@@ -10,8 +10,10 @@ const Gallery = styled.ul`
 `;
 
 const LoadMoreButton = styled.button`
-  width: 100%;
-  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
   color: #3470ff;
   background-color: transparent;
   text-decoration: underline;
@@ -23,6 +25,10 @@ const LoadMoreButton = styled.button`
   line-height: 1.5;
 
   cursor: pointer;
+
+  &:hover {
+    color: #0b44cd;
+  }
 `;
 
 export { Gallery, LoadMoreButton };
