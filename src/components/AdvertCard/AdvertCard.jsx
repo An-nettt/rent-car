@@ -1,14 +1,12 @@
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import svg from '../icon/icon.svg';
 import MainModal from '../Modal/Modal';
 import AdvertCardModal from '../AdvertCardModal/AdvertCardModal';
-import {
-  getFavorite,
-  getIsLoading,
-  getError,
-} from '../../redux/adverts/advertsSelectors';
+import { addToFavorite } from '../../redux/favorite/favoriteSlice';
+import { getFavorite } from '../../redux/favorite/favoriteSlice';
+// import { addToFavorite } from 'redux/favorite/favoriteSlice';
 
 import {
   Card,
@@ -28,11 +26,10 @@ const AdvertCard = ({ carEl }) => {
   const dispatch = useDispatch();
 
   const favorite = useSelector(getFavorite);
-  const isLoading = useSelector(getIsLoading);
-  const error = useSelector(getError);
-  // const filterContact = useSelector(getFilter);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const isFavorite = favorite.find((el) => el.id === carEl.id);
 
   const address = carEl.address.split(',');
   const city = address[1];
@@ -46,9 +43,12 @@ const AdvertCard = ({ carEl }) => {
     setIsModalOpen(false);
   }
 
-  function favoriteButtonClick() {
-    console.log('click');
-  }
+  const favoriteButtonClick = () => {
+    if (isFavorite) {
+      return;
+    }
+    dispatch(addToFavorite(carEl));
+  };
 
   return (
     <>
@@ -56,7 +56,12 @@ const AdvertCard = ({ carEl }) => {
         <Thumb>
           <Image src={carEl.img} alt={`${carEl.make} ${carEl.model}`} />
           <FavoriteButton type="button" onClick={favoriteButtonClick}>
-            <FavoriteIcon>
+            <FavoriteIcon
+              style={{
+                fill: isFavorite ? '#3470ff' : 'transparent',
+                stroke: isFavorite ? '#3470ff' : 'rgba(255, 255, 255, 0.8)',
+              }}
+            >
               <use href={svg + '#icon-Vector'}></use>
             </FavoriteIcon>
           </FavoriteButton>
