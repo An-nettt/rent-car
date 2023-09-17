@@ -22,13 +22,13 @@ export const favoriteSlice = createSlice({
       const index = state.array.findIndex(
         (favorite) => favorite.id === action.payload
       );
-
       state.array.splice(index, 1);
     },
   },
 });
 
 export const { addToFavorite, removeFavorite } = favoriteSlice.actions;
+
 export const favoriteReducer = persistReducer(
   persistConfig,
   favoriteSlice.reducer

@@ -4,7 +4,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import svg from '../icon/icon.svg';
 import MainModal from '../Modal/Modal';
 import AdvertCardModal from '../AdvertCardModal/AdvertCardModal';
-import { addToFavorite } from '../../redux/favorite/favoriteSlice';
+import {
+  addToFavorite,
+  removeFavorite,
+} from '../../redux/favorite/favoriteSlice';
 import { getFavorite } from '../../redux/favorite/favoriteSlice';
 // import { addToFavorite } from 'redux/favorite/favoriteSlice';
 
@@ -43,8 +46,10 @@ const AdvertCard = ({ carEl }) => {
     setIsModalOpen(false);
   }
 
-  const favoriteButtonClick = () => {
+  const favoriteButtonToggle = () => {
     if (isFavorite) {
+      console.log(carEl.id);
+      dispatch(removeFavorite(carEl.id));
       return;
     }
     dispatch(addToFavorite(carEl));
@@ -55,7 +60,7 @@ const AdvertCard = ({ carEl }) => {
       <Card>
         <Thumb>
           <Image src={carEl.img} alt={`${carEl.make} ${carEl.model}`} />
-          <FavoriteButton type="button" onClick={favoriteButtonClick}>
+          <FavoriteButton type="button" onClick={favoriteButtonToggle}>
             <FavoriteIcon
               style={{
                 fill: isFavorite ? '#3470ff' : 'transparent',
