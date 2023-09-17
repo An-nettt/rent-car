@@ -13,6 +13,7 @@ import { getFavorite } from '../../redux/favorite/favoriteSelectors';
 import {
   Card,
   Thumb,
+  ThumbImage,
   Image,
   FavoriteButton,
   FavoriteIcon,
@@ -57,6 +58,9 @@ const AdvertCard = ({ carEl }) => {
     <>
       <Card>
         <Thumb>
+          <ThumbImage>
+            <Image src={carEl.img} alt={`${carEl.make} ${carEl.model}`} />
+          </ThumbImage>
           <Image src={carEl.img} alt={`${carEl.make} ${carEl.model}`} />
           <FavoriteButton type="button" onClick={favoriteButtonToggle}>
             <FavoriteIcon

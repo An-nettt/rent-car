@@ -16,8 +16,17 @@ const Thumb = styled.div`
   overflow: hidden;
 `;
 
+const ThumbImage = styled.div`
+  position: relative;
+  height: 268px;
+
+  margin-bottom: 14px;
+
+  overflow: hidden;
+`;
+
 const Image = styled.img`
-  display: block;
+  position: absolute;
   max-width: 100%;
   height: 268px;
 
@@ -124,6 +133,7 @@ const Button = styled.button`
 export {
   Card,
   Thumb,
+  ThumbImage,
   Image,
   FavoriteButton,
   FavoriteIcon,
