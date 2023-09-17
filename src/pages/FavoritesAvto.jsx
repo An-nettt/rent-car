@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import AdvertsList from '../components/AdvertsList/AdvertsList';
 
 const Favorite = () => {
-  const [favoriteArray, setFavoriteArray] = useState([]);
-  const [firstRender, setFirstRender] = useState(true);
+  // const [favoriteArray, setFavoriteArray] = useState([]);
+  // const [firstRender, setFirstRender] = useState(true);
 
   const array = localStorage.getItem('persist:favorite');
   const parsedFavorite = JSON.parse(array);

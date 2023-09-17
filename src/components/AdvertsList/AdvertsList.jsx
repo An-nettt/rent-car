@@ -1,7 +1,4 @@
-import { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-
-import { Gallery, LoadMoreButton } from './AdvertsList.styled';
+import { Gallery } from './AdvertsList.styled';
 import AdvertCard from '../AdvertCard/AdvertCard';
 
 const AdvertsList = ({ array }) => {
@@ -19,4 +16,3 @@ const AdvertsList = ({ array }) => {
 export default AdvertsList;
 
 /* {isLoading && <Loader />} */
-//   якщо більше 7
