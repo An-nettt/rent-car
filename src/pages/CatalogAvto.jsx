@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import Filter from '../components/Filter/Filter';
 import AdvertsList from '../components/AdvertsList/AdvertsList';
 import LoadMoreButton from 'components/LoadMoreButton/LoadMoreButton';
 import { getAdverts } from '../redux/adverts/advertsSelectors';
@@ -21,14 +22,9 @@ const Adverts = () => {
     setPage(page + 1);
   };
 
-  // console.log(adverts.items);
-  // console.log(adverts.length);
-
-  // const isLoadMoreShown = adverts.length / 7 > 0;
-  // console.log(isLoadMoreShown);
-
   return (
     <div>
+      <Filter />
       {adverts && <AdvertsList array={adverts.items} />}
       <LoadMoreButton onClick={handleMoreAdvertsClick} page={page} />
     </div>

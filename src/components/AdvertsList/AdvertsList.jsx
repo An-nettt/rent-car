@@ -14,5 +14,3 @@ const AdvertsList = ({ array }) => {
 };
 
 export default AdvertsList;
-
-/* {isLoading && <Loader />} */

@@ -134,8 +134,3 @@ export {
   Text,
   Button,
 };
-
-// &:hover {
-//   fill: #3470ff;
-//   /* stroke: #3470ff; */
-// }

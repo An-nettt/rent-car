@@ -1,5 +1,3 @@
-// export const favoriteInitialState = {
-//   favorite: [],
-//   // isLoading: false,
-//   // error: null,
-// };
+export const favoriteInitialState = {
+  array: [],
+};

@@ -2,13 +2,11 @@ import { createSlice } from '@reduxjs/toolkit';
 import persistReducer from 'redux-persist/es/persistReducer';
 import storage from 'redux-persist/lib/storage';
 
+import { favoriteInitialState } from './favoriteInitialState';
+
 const persistConfig = {
   key: 'favorite',
   storage,
-};
-
-const favoriteInitialState = {
-  array: [],
 };
 
 export const favoriteSlice = createSlice({
@@ -33,4 +31,3 @@ export const favoriteReducer = persistReducer(
   persistConfig,
   favoriteSlice.reducer
 );
-export const getFavorite = (state) => state.favorite.array;

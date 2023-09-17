@@ -17,7 +17,6 @@ import {
 } from './AdvertCardModal.styled';
 
 const AdvertCardModal = ({ carEl, closeModal }) => {
-  // console.log(carEl);
   const address = carEl.address.split(',');
   const city = address[1];
   const country = address[2];

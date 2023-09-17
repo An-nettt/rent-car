@@ -8,7 +8,6 @@ const Favorite = () => {
   const array = localStorage.getItem('persist:favorite');
   const parsedFavorite = JSON.parse(array);
   const myFavorite = JSON.parse(parsedFavorite.array);
-  console.log(myFavorite);
 
   // useEffect(() => {
   //   if (firstRender) {

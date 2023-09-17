@@ -8,8 +8,7 @@ import {
   addToFavorite,
   removeFavorite,
 } from '../../redux/favorite/favoriteSlice';
-import { getFavorite } from '../../redux/favorite/favoriteSlice';
-// import { addToFavorite } from 'redux/favorite/favoriteSlice';
+import { getFavorite } from '../../redux/favorite/favoriteSelectors';
 
 import {
   Card,
@@ -48,7 +47,6 @@ const AdvertCard = ({ carEl }) => {
 
   const favoriteButtonToggle = () => {
     if (isFavorite) {
-      console.log(carEl.id);
       dispatch(removeFavorite(carEl.id));
       return;
     }
