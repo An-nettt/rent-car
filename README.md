@@ -22,7 +22,7 @@ View a list of available cars with photos and descriptions.
 
 <p align="center"><img  src="./readme_assets/catalog.png" width="85%"></p>
 
-For each car in the list, the user can click on the <h3>Learn more</h3> button, which opens a window with detailed information about the car, including photos, specifications, rental conditions and other details.
+For each car in the list, the user can click on the <h6>Learn more</h6> button, which opens a window with detailed information about the car, including photos, specifications, rental conditions and other details.
 
 <p align="center"><img  src="./readme_assets/modal.png" width="85%"></p>
 
@@ -30,7 +30,7 @@ If you click on the heart, the car is added to the favorites page.
 
 <p align="center"><img  src="./readme_assets/add-favorite.png" width="85%"></p>
 
-When you click on the <h3>Rental Car</h3> button, you will be automatically connected to the rental department.
+When you click on the <h6>Rental Car</h6> button, you will be automatically connected to the rental department.
 
 #### In the future, it is planned to implement:
 
@@ -43,8 +43,8 @@ The user will see a list of cars that he has added to his favorite list. Each ca
 
 <p align="center"><img  src="./readme_assets/favorite.png" width="85%"></p>
 
-For each car in the favorites list, the user can click on the <h3>Learn more</h3> button, which opens a window with detailed information about the car, including photos, specifications, rental conditions and other details.
+For each car in the favorites list, the user can click on the <h6>Learn more</h6> button, which opens a window with detailed information about the car, including photos, specifications, rental conditions and other details.
 
 <p align="center"><img  src="./readme_assets/favorite-modal.png" width="85%"></p>
 
-When you click on the <h3>Rental Car</h3> button, you will be automatically connected to the rental department.
+When you click on the <h6>Rental Car</h6> button, you will be automatically connected to the rental department.
