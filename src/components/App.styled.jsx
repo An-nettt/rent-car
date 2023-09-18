@@ -37,7 +37,7 @@ const Navigate = styled.nav`
 `;
 
 const Link = styled(NavLink)`
-  color: #3470ff;
+  color: #ffffff;
 
   font-family: 'Manrope';
   font-size: 25px;
@@ -45,11 +45,11 @@ const Link = styled(NavLink)`
   text-decoration: none;
 
   &:hover {
-    color: #ffffff;
+    color: #3470ff;
   }
 
   &.active {
-    color: #ffffff;
+    color: #3470ff;
   }
 `;
 

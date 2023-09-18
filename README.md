@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Rent a Car
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+The car rental site in Ukraine is an online platform designed for convenient car rental in different regions of Ukraine. The following is a general description of the possible sections and features that can be found on such a site:
 
+## Home page
+
+Information about the service and its benefits.
+
+<p align="center"><img  src="./readme_assets/home-page.png" width="30%"></p>
+
+#### In the future, it is planned to implement:
+
+Search for available cars (specify location, rental and return dates).
 In the project directory, you can run:
 
-### `npm start`
+## Car search
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Filters for accurate car selection (make, model, body type, engine volume, fuel, etc.).
+View a list of available cars with photos and descriptions.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<p align="center"><img  src="./readme_assets/catalog.png" width="30%"></p>
 
-### `npm test`
+For each car in the list, the user can click on the <h3>Learn more</h3> button, which opens a window with detailed information about the car, including photos, specifications, rental conditions and other details.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="center"><img  src="./readme_assets/modal.png" width="30%"></p>
 
-### `npm run build`
+If you click on the heart, the car is added to the favorites page.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align="center"><img  src="./readme_assets/add-favorite.png" width="30%"></p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+When you click on the <h3>Rental Car</h3> button, you will be automatically connected to the rental department.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### In the future, it is planned to implement:
 
-### `npm run eject`
+Calculation of the rental cost based on the selected parameters.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Favorite
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The "Favorite" page on the car rental website is a personal section where users can save and track cars they like or are interested in for future rental.
+The user will see a list of cars that he has added to his favorite list. Each car is displayed with a picture, name, basic characteristics (make, model, body type) and the current rental price.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<p align="center"><img  src="./readme_assets/favorite.png" width="30%"></p>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+For each car in the favorites list, the user can click on the <h3>Learn more</h3> button, which opens a window with detailed information about the car, including photos, specifications, rental conditions and other details.
 
-## Learn More
+<p align="center"><img  src="./readme_assets/favorite-modal.png" width="30%"></p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+When you click on the <h3>Rental Car</h3> button, you will be automatically connected to the rental department.
